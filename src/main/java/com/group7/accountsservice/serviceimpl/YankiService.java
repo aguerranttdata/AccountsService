@@ -36,7 +36,7 @@ public class YankiService {
     @Autowired
     private MessageService messageService;
 
-    private RMapReactive<Long, AccountYanki> accountMap;
+    private final RMapReactive<Long, AccountYanki> accountMap;
 
     public YankiService(RedissonReactiveClient client) {
         this.accountMap = client.getMap("account", new TypedJsonJacksonCodec(Long.class, AccountYanki.class));

@@ -28,6 +28,7 @@ public class Account {
     private String type;
     @NonNull
     private Double balance;
+    private String number;
     private Double maintenanceFee;
     private Integer movementsLimit;
     private List<String> holders;

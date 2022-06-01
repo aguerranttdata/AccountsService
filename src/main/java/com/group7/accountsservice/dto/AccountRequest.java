@@ -23,6 +23,8 @@ public class AccountRequest {
     private String clientType;
     private String clientProfile;
     private String type;
+
+    private String number;
     private Double balance;
     private List<String> holders;
     private List<String> signers;
@@ -56,6 +58,7 @@ public class AccountRequest {
                 .clientProfile(this.clientProfile)
                 .type(this.type)
                 .balance(this.balance)
+                .number(this.number)
                 .holders(this.holders)
                 .signers(this.signers)
                 .movementDay(this.movementDay)

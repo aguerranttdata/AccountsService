@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 @Slf4j
 @Component
 public class WebClientUtils {
-    private WebClient webClient;
+    private final WebClient webClient;
     private static final String NOT_FOUND_MESSAGE = "Not found Client with ID: ";
     @Value("${services-uri.clients}")
     private String clientsService;

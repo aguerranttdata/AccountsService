@@ -1,6 +1,7 @@
 package com.group7.accountsservice.serviceimpl;
 
 import com.group7.accountsservice.dto.LinkRequest;
+import com.group7.accountsservice.dto.MessageKafka;
 import com.group7.accountsservice.dto.Result;
 import com.group7.accountsservice.dto.Yanki;
 import lombok.extern.slf4j.Slf4j;
@@ -28,6 +29,10 @@ public class MessageService {
 
     public boolean sendToLink(LinkRequest linkRequest){
         return streamBridge.send("link-out-0",linkRequest);
+    }
+
+    public boolean sendProcess(MessageKafka messageKafka) {
+        return streamBridge.send("proccessaccount-out-0", messageKafka);
     }
 
 }
